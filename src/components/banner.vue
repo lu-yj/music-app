@@ -40,7 +40,6 @@ export default {
 
         let res = await getBanner();
         this.imgs = res.data.banners;
-        console.log(res.data.banners);
     },
 
   };
@@ -48,12 +47,14 @@ export default {
 
 <style lang="less" scoped>
 .swiper-container{
-  width: 9rem;
-  height: 4rem;
-  border-radius: 0.1rem;
-}
-
-.swiper-slide{
-  width: 100%;
+    width: 9.4rem;
+    height: 3.6rem;
+    border-radius: 0.2rem;
+    .swiper-slide{
+        width: 100%;
+        img{
+            width: 100%;
+        }
+    }
 }
 </style>
