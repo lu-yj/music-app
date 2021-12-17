@@ -6,6 +6,13 @@
   "description": "",
   "glyphs": [
     {
+      "icon_id": "4753456",
+      "name": "收音机",
+      "font_class": "shouyinji",
+      "unicode": "e7fa",
+      "unicode_decimal": 59386
+    },
+    {
       "icon_id": "629357",
       "name": "搜索",
       "font_class": "sousuo",

@@ -20,11 +20,12 @@ export default {
 
     data() {
       return {
-        imgs: [
-          {pic: require('../assets/1.jpg')},
-          {pic: require('../assets/2.jpg')},
-          {pic: require('../assets/3.jpg')},
-        ],
+        imgs: new Array(10).fill(null).map(() => {return {pic: null}}),
+		// [
+        //   {pic: require('../assets/1.jpg')},
+        //   {pic: require('../assets/2.jpg')},
+        //   {pic: require('../assets/3.jpg')},
+        // ],
       }
     },
 
@@ -47,14 +48,11 @@ export default {
 
 <style lang="less" scoped>
 .swiper-container{
-    width: 9.4rem;
+	width: 9.4rem;
     height: 3.6rem;
     border-radius: 0.2rem;
-    .swiper-slide{
+    .swiper-slide img{
         width: 100%;
-        img{
-            width: 100%;
-        }
     }
 }
 </style>

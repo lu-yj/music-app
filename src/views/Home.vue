@@ -1,6 +1,7 @@
 <template>
   <top-nav></top-nav>
   <banner></banner>
+  <icon-list></icon-list>
 </template>
 
 <script>

@@ -1,5 +1,5 @@
 <template>
-  <div class="top">
+  <div class="container">
     <div class="topLeft">
       <svg class="liebiao" aria-hidden="true">
         <use xlink:href="#icon-liebiao"></use>
@@ -20,12 +20,11 @@
 </template>
 
 <style lang="less" scoped>
-.top{
-    width: 9.4rem;
-    height: 1rem;
+.container{
+    height: 1.6rem;
     display: flex;
     justify-content: space-between;
-    margin: 0.5rem auto;
+    padding: 0.3rem;
     .topCenter{
         width: 6rem;
         display: flex;
