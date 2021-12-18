@@ -1,8 +1,8 @@
 @font-face {
   font-family: "iconfont"; /* Project id 3025060 */
-  src: url('iconfont.woff2?t=1639759072912') format('woff2'),
-       url('iconfont.woff?t=1639759072912') format('woff'),
-       url('iconfont.ttf?t=1639759072912') format('truetype');
+  src: url('iconfont.woff2?t=1639830525129') format('woff2'),
+       url('iconfont.woff?t=1639830525129') format('woff'),
+       url('iconfont.ttf?t=1639830525129') format('truetype');
 }
 
 .iconfont {
@@ -11,6 +11,54 @@
   font-style: normal;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-gengduo-shuxiang:before {
+  content: "\e8c4";
+}
+
+.icon-gengduo:before {
+  content: "\e628";
+}
+
+.icon-fenxiang:before {
+  content: "\e652";
+}
+
+.icon-show_duoxuan:before {
+  content: "\e602";
+}
+
+.icon-duoxuan_xuanzhong:before {
+  content: "\e610";
+}
+
+.icon-liaotian:before {
+  content: "\e63c";
+}
+
+.icon-xiazai:before {
+  content: "\e856";
+}
+
+.icon-wenhao:before {
+  content: "\e72d";
+}
+
+.icon-zuojiantou:before {
+  content: "\e625";
+}
+
+.icon-shipinbofang:before {
+  content: "\e601";
+}
+
+.icon-VIP:before {
+  content: "\e69d";
+}
+
+.icon-bofang1:before {
+  content: "\e600";
 }
 
 .icon-shouyinji:before {

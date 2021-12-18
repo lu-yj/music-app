@@ -24,7 +24,8 @@
     height: 1.6rem;
     display: flex;
     justify-content: space-between;
-    padding: 0.3rem;
+    align-items: center;
+    padding: 0.4rem;
     .topCenter{
         width: 6rem;
         display: flex;
@@ -37,11 +38,13 @@
     .liebiao{
         width: 0.8rem;
         height: 0.8rem;
+		padding-top: 0.15rem;
     }
 
     .sousuo{
-        width: 0.6rem;
-        height: 0.6rem;
+        width: 0.7rem;
+        height: 0.7rem;
+		padding-top: 0.2rem;
     }
 }
 </style>

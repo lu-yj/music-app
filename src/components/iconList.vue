@@ -31,7 +31,7 @@
 .container{
     display: flex;
     justify-content: space-between;
-    padding: 0.3rem;
+    padding: 0.4rem;
     .iconItem{
         display: flex;
         flex-direction: column;

@@ -1,22 +1,25 @@
 <template>
-  <top-nav></top-nav>
+  <home-nav></home-nav>
   <banner></banner>
   <icon-list></icon-list>
+  <song-sheet-list></song-sheet-list>
 </template>
 
 <script>
-import topNav from '@/components/topNav.vue'
+import homeNav from '@/components/homeNav.vue'
 import banner from '@/components/banner.vue'
 import iconList from '@/components/iconList.vue'
+import songSheetList from '@/components/songSheetList.vue'
 
 export default {
   name: 'Home',
 
   components: {
-    topNav,
+    homeNav,
     banner,
     iconList,
-  },
+    songSheetList,
+},
   
 }
 </script>
