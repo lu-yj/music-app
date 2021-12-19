@@ -14,9 +14,9 @@ import { mapMutations } from 'vuex';
 
 export default {
     components: {
-    songSheetTop,
-    playList,
-},
+        songSheetTop,
+        playList,
+    },
 
     data() {
         return {

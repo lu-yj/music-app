@@ -8,7 +8,7 @@ import playController from "./components/playController.vue"
 
 export default{
 	components: {
-		playController
+		playController,
 	},
 }
 
@@ -25,5 +25,24 @@ export default{
 a{
   	color: black;
 	text-decoration: none;
+}
+.icon{
+	width: 0.8rem;
+	height: 0.8rem;
+}
+.header, .footer{
+	width: 10rem;
+	height: 1.6rem;
+	padding: 0.4rem;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	font-size: 0.5rem;
+}
+.footer{
+	height: 1.8rem;
+	position: absolute;
+	left: 0;
+	bottom: 0;
 }
 </style>

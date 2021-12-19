@@ -1,7 +1,7 @@
 <template>
-  <div class="container">
+  <div class="header">
     <div class="topLeft">
-      <svg class="liebiao" aria-hidden="true">
+      <svg class="icon" aria-hidden="true" style="padding-top: 0.15rem;">
         <use xlink:href="#icon-liebiao"></use>
       </svg>
     </div>
@@ -12,7 +12,7 @@
       <span class="topBtn">视频</span>
     </div>
     <div class="topRight">
-      <svg class="sousuo" aria-hidden="true">
+      <svg class="icon" aria-hidden="true" style="padding-top: 0.2rem;">
         <use xlink:href="#icon-sousuo"></use>
       </svg>
     </div>
@@ -20,12 +20,7 @@
 </template>
 
 <style lang="less" scoped>
-.container{
-    height: 1.6rem;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0.4rem;
+.header{
     .topCenter{
         width: 6rem;
         display: flex;
@@ -33,18 +28,6 @@
         .active {
             font-weight: 800;
         }
-    }
-
-    .liebiao{
-        width: 0.8rem;
-        height: 0.8rem;
-		padding-top: 0.15rem;
-    }
-
-    .sousuo{
-        width: 0.7rem;
-        height: 0.7rem;
-		padding-top: 0.2rem;
     }
 }
 </style>

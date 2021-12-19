@@ -13,7 +13,7 @@
             </div>
         </div>
         <div class="list">
-            <div class="playItem" v-for="(item, idx) in sheetinfo.tracks" :key="idx">
+            <div class="playItem" v-for="(item, idx) in sheetinfo.tracks" :key="idx" @click="setPlayIdx(idx)">
                 <div class="left">
                     <div class="order">{{idx+1}}</div>
                     <div class="content">
@@ -38,9 +38,10 @@
 </template>
 
 <script>
+import { mapMutations } from "vuex";
+
 export default {
     props: ['sheetinfo'],
-
     methods: {
         changeUnit(num) {
             if (num >= 100000000) {
@@ -51,6 +52,7 @@ export default {
                 return num;
             }
         },
+        ...mapMutations(['setPlayIdx']),
     },
 }
 </script>
@@ -99,6 +101,7 @@ export default {
             justify-content: space-between;
             align-items: center;
             height: 1.6rem;
+            border-top: 1px solid whitesmoke;
             .left{
                 display: flex;
                 align-items: center;

@@ -13,3 +13,7 @@ export function getSongSheetList(limit=20) {
 export function getSongSheet(id) {
     return axios.get(`${baseUrl}/playlist/detail?id=${id}`);
 }
+
+export function getLyric(id) {
+    return axios.get(`${baseUrl}/lyric?id=${id}`);
+}

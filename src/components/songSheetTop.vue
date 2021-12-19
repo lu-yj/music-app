@@ -1,15 +1,15 @@
 <template>
     <div class="container">
         <img class="bg" :src="sheetinfo.coverImgUrl">
-        <div class="nav">
+        <div class="header">
             <div class="back">
-                <svg class="zuojiantou" aria-hidden="true" @click="$router.go(-1)">
+                <svg class="icon" aria-hidden="true" style="padding-top: 0.1rem;" @click="$router.go(-1)">
                     <use xlink:href="#icon-zuojiantou"></use>
                 </svg>
                 <span class="title">歌单</span>
             </div>
             <div class="right">
-                <svg class="sousuo" aria-hidden="true">
+                <svg class="icon" aria-hidden="true" style="padding-top: 0.2rem;">
                     <use xlink:href="#icon-sousuo"></use>
                 </svg>               
             </div>
@@ -92,12 +92,7 @@ export default {
         z-index: -1;
         filter: blur(50px);
     }
-    .nav{
-        display: flex;
-        justify-content: space-between;
-        height: 1.6rem;
-        align-items: center;
-        padding: 0.4rem;
+    .header{
         .back{
             display: flex;
             align-items: center;
@@ -106,14 +101,8 @@ export default {
                 margin-left: 0.5rem;
             }
         }
-        .zuojiantou, .sousuo{
-            width: 0.7rem;
-            height: 0.7rem;
+        .icon{
             fill: white;
-            padding-top: 0.2rem;
-        }
-        .zuojiantou{
-            padding-top: 0.1rem;
         }
     }
     .content{

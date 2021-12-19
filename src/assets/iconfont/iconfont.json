@@ -6,11 +6,32 @@
   "description": "",
   "glyphs": [
     {
-      "icon_id": "1727447",
-      "name": "216更多-竖向",
-      "font_class": "gengduo-shuxiang",
-      "unicode": "e8c4",
-      "unicode_decimal": 59588
+      "icon_id": "16648578",
+      "name": "循环",
+      "font_class": "xunhuan",
+      "unicode": "e61f",
+      "unicode_decimal": 58911
+    },
+    {
+      "icon_id": "13119206",
+      "name": "展开",
+      "font_class": "zhankai",
+      "unicode": "e7d3",
+      "unicode_decimal": 59347
+    },
+    {
+      "icon_id": "688097",
+      "name": "上一首 上一个",
+      "font_class": "shangyishoushangyige",
+      "unicode": "e78a",
+      "unicode_decimal": 59274
+    },
+    {
+      "icon_id": "688128",
+      "name": "下一个 下一首",
+      "font_class": "xiayigexiayishou",
+      "unicode": "e7a5",
+      "unicode_decimal": 59301
     },
     {
       "icon_id": "5978833",
@@ -32,13 +53,6 @@
       "font_class": "show_duoxuan",
       "unicode": "e602",
       "unicode_decimal": 58882
-    },
-    {
-      "icon_id": "21500986",
-      "name": "多选_选中",
-      "font_class": "duoxuan_xuanzhong",
-      "unicode": "e610",
-      "unicode_decimal": 58896
     },
     {
       "icon_id": "1581577",
@@ -130,13 +144,6 @@
       "font_class": "liebiao",
       "unicode": "e60a",
       "unicode_decimal": 58890
-    },
-    {
-      "icon_id": "7594169",
-      "name": "24gf-playlistMusic",
-      "font_class": "24gf-playlistMusic",
-      "unicode": "ea86",
-      "unicode_decimal": 60038
     },
     {
       "icon_id": "10340479",
