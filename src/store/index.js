@@ -31,6 +31,9 @@ export default createStore({
 		setPlayList(state, value) {
 			state.playList = value;
 		},
+		pushPlayList(state, value) {
+			state.playList.push(value);
+		},
 		setPlayIdx(state, value) {
 			state.playCurIdx = value;
 		},

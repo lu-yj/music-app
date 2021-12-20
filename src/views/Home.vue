@@ -1,8 +1,10 @@
 <template>
-  <home-nav></home-nav>
-  <banner></banner>
-  <icon-list></icon-list>
-  <song-sheet-list></song-sheet-list>
+	<div class="homePage">
+		<home-nav></home-nav>
+		<banner></banner>
+		<icon-list></icon-list>
+		<song-sheet-list></song-sheet-list>	
+	</div>
 </template>
 
 <script>

@@ -85,9 +85,9 @@ export default{
 
 <style lang="less" scoped>
 .footer{
-    position: fixed;
     background-color: white;
     border-top: 1px solid gray;
+    z-index: 5;
     .left{
         display: flex;
         width: 6rem;

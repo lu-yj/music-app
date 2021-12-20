@@ -17,3 +17,7 @@ export function getSongSheet(id) {
 export function getLyric(id) {
     return axios.get(`${baseUrl}/lyric?id=${id}`);
 }
+
+export function searchMusic(keyword) {
+    return axios.get(`${baseUrl}/search?keywords=${keyword}`);
+}

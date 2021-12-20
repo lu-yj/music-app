@@ -1,6 +1,8 @@
 <template>
-  	<router-view/>
-	<play-controller></play-controller>
+	<div class="app">
+		<router-view/>
+		<play-controller></play-controller>
+	</div>
 </template>
 
 <script>
@@ -26,6 +28,10 @@ a{
   	color: black;
 	text-decoration: none;
 }
+.app{
+	position: relative;
+	height: 1000px;
+}
 .icon{
 	width: 0.8rem;
 	height: 0.8rem;
@@ -41,7 +47,7 @@ a{
 }
 .footer{
 	height: 1.8rem;
-	position: absolute;
+	position: fixed;
 	left: 0;
 	bottom: 0;
 }

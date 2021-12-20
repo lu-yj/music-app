@@ -83,7 +83,7 @@ export default {
 
 <style lang="less" scoped>
 .container{
-    height: 10rem;
+    height: 9rem;
     .bg{
         position: fixed;
         top: 0;
