@@ -4,7 +4,7 @@
 			<use xlink:href="#icon-liebiao"></use>
 		</svg>
 		<div class="topCenter">
-			<span class="topBtn">我的</span>
+			<span class="topBtn" @click="$router.push('/me')">我的</span>
 			<span class="topBtn active">发现</span>
 			<span class="topBtn">云村</span>
 			<span class="topBtn">视频</span>

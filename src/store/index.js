@@ -1,5 +1,5 @@
 import { createStore } from 'vuex';
-import {getLyric} from '@/api/axiosReq.js';
+import {getLyric, phoneLogin, getUserInfo} from '@/api/axiosReq.js';
 
 export default createStore({
 	state: {
@@ -15,6 +15,11 @@ export default createStore({
 		lyric: '',
 		curTime: 0,
 		intervalId: 0,
+		user: {
+			isLogin: false,
+			account: {},
+			detail: {}
+		}
 	},
 	getters: {
 		lyricList(state) {
@@ -42,14 +47,33 @@ export default createStore({
 		},
 		setCurTime(state, value) {
 			state.curTime = value;
+		},
+		setUser(state, value) {
+			state.user = value;
 		}
 	},
 	actions: {
 		async reqLyric(content, payload) {
-			console.log(payload);
+			// console.log(payload);
 			let res = await getLyric(payload.id);
+			// console.log(res);
 			content.commit('setLyric', res.data.lrc.lyric);
-			console.log(typeof res.data.lrc.lyric);
+		},
+		async reqLogin(content, payload) {
+			// console.log(payload);
+			let res = await phoneLogin(payload.phone, payload.password);
+			console.log(1, res);
+			if (res.data.code === 200) {
+				content.state.user.isLogin = true;
+				content.state.user.account = res.data.account;
+				let userDetail = await getUserInfo(res.data.account.id);
+				console.log(2, userDetail);
+				content.state.user.detail = userDetail.data;
+				localStorage.userData = JSON.stringify(content.state.user);
+				content.commit('setUser', content.state.user);
+				console.log(content.state.user);
+			}
+			return res;
 		}
 	},
 	modules: {

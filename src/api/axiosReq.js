@@ -1,6 +1,7 @@
 import axios from 'axios';
 
-let baseUrl = 'http://localhost:3000'
+// http://localhost:3000
+let baseUrl = 'https://netease-cloud-music-api-mocha-three.vercel.app'
 
 export function getBanner(type=2) {
     return axios.get(`${baseUrl}/banner?type=${type}`);
@@ -20,4 +21,12 @@ export function getLyric(id) {
 
 export function searchMusic(keyword) {
     return axios.get(`${baseUrl}/search?keywords=${keyword}`);
+}
+
+export function phoneLogin(phone, password) {
+    return axios.get(`${baseUrl}/login/cellphone?phone=${phone}&password=${password}`);
+}
+
+export function getUserInfo(uid) {
+    return axios.get(`${baseUrl}/user/detail?uid=${uid}`);
 }
