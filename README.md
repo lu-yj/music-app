@@ -23,3 +23,7 @@ See [Configuration Reference](https://cli.vuejs.org/config/).
 main.js 引入脚本  
 utils/rem.js 设置rem，用于自适应布局  
 assets/iconfont 下载下来的图标资源  
+
+
+## 部署 dist 文件到 GitHub Pages 上
+git subtree push --prefix dist origin gh-pages
