@@ -13,7 +13,7 @@ export default{
 		playController,
 	},
 	mounted() {
-		let userData = JSON.parse(localStorage.userData);
+		let userData = sessionStorage.userData ? JSON.parse(sessionStorage.userData) : {};
 		// console.log(userData);
 		this.$store.commit('setUser', userData);
 	}
@@ -33,24 +33,19 @@ a{
   	color: black;
 	text-decoration: none;
 }
-.app{
-	position: relative;
-	height: 1000px;
-}
 .icon{
-	width: 0.8rem;
-	height: 0.8rem;
+	width: 0.7rem;
+	height: 0.7rem;
 }
-.header, .footer{
+header, footer{
 	width: 10rem;
 	height: 1.6rem;
 	padding: 0.4rem;
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-	font-size: 0.5rem;
 }
-.footer{
+footer{
 	height: 1.8rem;
 	position: fixed;
 	left: 0;

@@ -69,7 +69,7 @@ export default createStore({
 				let userDetail = await getUserInfo(res.data.account.id);
 				console.log(2, userDetail);
 				content.state.user.detail = userDetail.data;
-				localStorage.userData = JSON.stringify(content.state.user);
+				sessionStorage.userData = JSON.stringify(content.state.user);
 				content.commit('setUser', content.state.user);
 				console.log(content.state.user);
 			}

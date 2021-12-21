@@ -1,19 +1,19 @@
 <template>
     <div class="container">
         <img class="bg" :src="sheetinfo.coverImgUrl">
-        <div class="header">
+        <header>
             <div class="back">
-                <svg class="icon" aria-hidden="true" style="padding-top: 0.1rem;" @click="$router.go(-1)">
-                    <use xlink:href="#icon-zuojiantou"></use>
+                <svg class="icon" aria-hidden="true" @click="$router.go(-1)">
+                    <use xlink:href="#icon-fanhui"></use>
                 </svg>
                 <span class="title">歌单</span>
             </div>
             <div class="right">
-                <svg class="icon" aria-hidden="true" style="padding-top: 0.2rem;">
+                <svg class="icon" aria-hidden="true">
                     <use xlink:href="#icon-sousuo"></use>
                 </svg>               
             </div>
-        </div>
+        </header>
         <div class="content">
             <div class="contentLeft">
                 <img :src="sheetinfo.coverImgUrl">
@@ -54,7 +54,7 @@
             </div>
             <div class="iconItem">
                 <svg class="icon" aria-hidden="true">
-                    <use xlink:href="#icon-show_duoxuan"></use>
+                    <use xlink:href="#icon-duoxuan"></use>
                 </svg>
                 <span>多选</span>
             </div>
@@ -92,7 +92,7 @@ export default {
         z-index: -1;
         filter: blur(50px);
     }
-    .header{
+    header{
         .back{
             display: flex;
             align-items: center;
@@ -135,20 +135,25 @@ export default {
             width: 4rem;
             h4{
                 color: white;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                display: -webkit-box;
+                -webkit-line-clamp: 2;
+                -webkit-box-orient: vertical;
             }
             .author{
                 display: flex;
                 align-items: center;
-                padding: 0.3rem 0;
-                img.header{
+                margin: 0.3rem 0;
+                img{
                     width: 0.5rem;
                     height: 0.5rem;
                     border-radius: 0.25rem;
                 }
                 span{
                     color: white;
-                    font-size: 0.4rem;
-                    padding-left: 0.1rem;
+                    font-size: 0.35rem;
+                    padding-left: 0.2rem;
                 }
             }
             .description{

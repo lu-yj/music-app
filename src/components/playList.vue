@@ -1,6 +1,6 @@
 <template>
     <div class="container">
-        <div class="head">
+        <header>
             <div class="headLeft">
                 <svg class="icon" aria-hidden="true">
                     <use xlink:href="#icon-bofang"></use>
@@ -11,7 +11,7 @@
             <div class="btn">
                 + 收藏（{{changeUnit(sheetinfo.subscribedCount)}}）
             </div>
-        </div>
+        </header>
         <div class="list">
             <div class="playItem" v-for="(item, idx) in sheetinfo.tracks" :key="idx" @click="setPlayIdx(idx)">
                 <div class="left">
@@ -20,18 +20,16 @@
                         <div class="title">{{item.name}}</div>
                         <div class="author">
                             <!-- <div class="tag" v-for="(tag, i) in sheetinfo.tags" :key="i">{{tag}}</div> -->
-                            <span>{{item.al.name}}</span>
+                            <span>{{item.ar[0].name}}</span>
                         </div>
                     </div>
                 </div>
-                <div class="right">
-                    <svg class="icon" aria-hidden="true">
-                        <use xlink:href="#icon-shipinbofang"></use>
-                    </svg>
-                    <svg class="icon" aria-hidden="true">
-                        <use xlink:href="#icon-gengduo"></use>
-                    </svg>
-                </div>
+                <svg class="icon" aria-hidden="true">
+                    <use xlink:href="#icon-shipin"></use>
+                </svg>
+                <svg class="icon" aria-hidden="true">
+                    <use xlink:href="#icon-gengduo"></use>
+                </svg>
             </div>
         </div>
     </div>
@@ -59,23 +57,13 @@ export default {
 
 <style lang="less" scoped>
 .container{
-    width: 10rem;
     background-color: white;
     border-top-left-radius: 0.5rem;
     border-top-right-radius: 0.5rem;
-    .head{
-        display: flex;
-        justify-content: space-between;
-        height: 1.6rem;
-        padding: 0.4rem;
-        align-items: center;
+    header{
         .headLeft{
             display: flex;
             align-items: center;
-            .icon{
-                width: 0.6rem;
-                height: 0.6rem;
-            }
             .title{
                 font-size: 0.45rem;
                 font-weight: 600;
@@ -101,19 +89,23 @@ export default {
             justify-content: space-between;
             align-items: center;
             height: 1.6rem;
+            padding: 0 0.6rem;
             border-top: 1px solid whitesmoke;
             .left{
                 display: flex;
                 align-items: center;
                 .order{
                     font-size: 0.5rem;
-                    padding-left: 0.4rem;
                     color: gray;
-                    width: 1.2rem;
+                    width: 1rem;
                 }
-                .content{
+                .content{                        
+                    width: 6rem;
                     .title{
                         font-size: 0.4rem;
+                        white-space: nowrap;
+                        overflow: hidden;
+                        text-overflow: ellipsis;
                     }
                     .author{
                         display: flex;
@@ -132,12 +124,9 @@ export default {
                     }
                 }
             }
-            .right{
-                padding-right: 0.4rem;
-                .icon{
-                    width: 0.6rem;
-                    height: 0.6rem;
-                }
+            .icon{
+                width: 0.6rem;
+                height: 0.6rem;
             }
         }
     }

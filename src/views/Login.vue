@@ -1,5 +1,11 @@
 <template>
     <div class="login">
+        <header>
+            <svg class="icon" aria-hidden="true" @click="$router.go(-1)">
+                <use xlink:href="#icon-fanhui"></use>
+            </svg>
+        </header>
+
         <p class="title">欢迎登录</p>
         <div class="forms">
             <div class="formItem">
@@ -18,13 +24,13 @@
         </div>
         <p class="content">其他登录方式</p>
         <div class="loginChoice"> 
-            <svg class="icon" aria-hidden="true" style="width: 1rem; height: 1rem">
+            <svg class="icon" aria-hidden="true">
                 <use xlink:href="#icon-weixin"></use>
             </svg>
             <svg class="icon" aria-hidden="true">
                 <use xlink:href="#icon-qq"></use>
             </svg>
-            <svg class="icon" aria-hidden="true" style="padding-bottom: 0.05rem">
+            <svg class="icon" aria-hidden="true">
                 <use xlink:href="#icon-pingguo"></use>
             </svg>
         </div>
@@ -58,6 +64,9 @@ export default {
     background-color: #C73E2C;
     color: white;
     height: 100vh;
+    header{
+        fill: white;
+    }
     .title{
         margin-top: 4rem;
         font-size: 0.8rem;
@@ -97,7 +106,7 @@ export default {
             height: 1rem;
             border: none;
             border-radius: 0.5rem;
-            color: gray;
+
             font-size: 0.5rem;
         }
     }        

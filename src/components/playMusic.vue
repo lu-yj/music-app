@@ -1,46 +1,46 @@
 <template>
     <div class="playPage">
         <div class="bg" :style="{backgroundImage: `url(${bgUrl})`}"></div>
-        <div class="header">
-            <svg class="icon" aria-hidden="true" style="padding-top: 0.1rem;" @click="$emit('back')">
-                <use xlink:href="#icon-zuojiantou"></use>
+        <header>
+            <svg class="icon" aria-hidden="true" @click="$emit('back')">
+                <use xlink:href="#icon-fanhui"></use>
             </svg>
             <div class="title">
                 <marquee behavior="scroll" direction="left">{{songName}}</marquee>
             </div>
-            <svg class="icon" aria-hidden="true" style="padding-top: 0.15rem">
+            <svg class="icon" aria-hidden="true">
                 <use xlink:href="#icon-fenxiang"></use>
             </svg>
-        </div>
-        <div class="cd" v-show="!isLyric">
+        </header>
+        <div class="cd" v-show="!isLyric" @click="changeShow">
             <img class="needle" src="@\assets\img\needle.png" alt="">
             <img class="disc" src="@\assets\img\disc.png" alt="">
             <img class="discImg" :src="bgUrl" alt="" :class="{active: !paused}">
         </div>
-        <div class="lyric" v-show="isLyric" ref="lyric">
+        <div class="lyric" v-show="isLyric" ref="lyric" @click="changeShow">
             <p :class="{active: (curTime*1000 < item.curLyricTime && curTime*1000 > item.preLyricTime)}" v-for="(item, i) in $store.getters.lyricList" :key="i">{{item.text}}</p>
         </div>
         <div class="progress"></div>
-        <div class="footer">
+        <footer>
             <svg class="icon" aria-hidden="true">
                 <use xlink:href="#icon-xunhuan"></use>
             </svg>
             <svg class="icon" aria-hidden="true" @click="changeSong(-1)">
-                <use xlink:href="#icon-shangyishoushangyige"></use>
+                <use xlink:href="#icon-shangyige"></use>
             </svg>
-            <svg class="icon" aria-hidden="true" v-if="paused" @click="play">
+            <svg class="icon" aria-hidden="true" v-if="paused" @click="play" style="width: 1rem; height: 1rem">
                 <use xlink:href="#icon-bofang"></use>
             </svg>
-            <svg class="icon" aria-hidden="true" v-else @click="play">
+            <svg class="icon" aria-hidden="true" v-else @click="play" style="width: 1rem; height: 1rem">
                 <use xlink:href="#icon-zanting"></use>
             </svg>
             <svg class="icon" aria-hidden="true" @click="changeSong(1)">
-                <use xlink:href="#icon-xiayigexiayishou"></use>
+                <use xlink:href="#icon-xiayige"></use>
             </svg>
             <svg class="icon" aria-hidden="true">
                 <use xlink:href="#icon-zhankai"></use>
             </svg>
-        </div>
+        </footer>
     </div>
 </template>
 
@@ -63,6 +63,9 @@ export default {
             } else {
                 this.$store.commit('setPlayIdx', this.playCurIdx + n);
             }
+        },
+        changeShow(){
+            this.isLyric = !this.isLyric;
         }
     },
     computed: {
@@ -94,9 +97,9 @@ export default {
         height: 100vh;
         background-size: auto 100%;
         background-position: center;
-        filter: blur(10px);
+        filter: blur(60px);
     }
-    .header{
+    header{
         position: absolute;
         top: 0;
         left: 0;
@@ -140,7 +143,7 @@ export default {
             z-index: 1;
         }
         .discImg.active{
-            animation: rotate 1s linear infinite;
+            animation: rotate 10s linear infinite;
             @keyframes rotate{
                 100%{
                     transform: rotate(360deg);
@@ -162,7 +165,8 @@ export default {
         }
 
     }
-    .footer{
+    footer{
+        bottom: 1rem;
         .icon{
             fill: white;
         }

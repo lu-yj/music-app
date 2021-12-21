@@ -1,9 +1,9 @@
 <template>
-    <div class="footer">
+    <footer>
         <div class="left" @click="show=true">
             <img :src="playList[playCurIdx].al.picUrl">
             <div class="content">
-                <div class="title">{{playList[playCurIdx].name}}</div>
+                <marquee class="title" behavior="scroll" direction="left" scrollamount="3">{{playList[playCurIdx].name}}</marquee>
                 <div class="tip">横划可以切换上下首哦</div>
             </div>
         </div>
@@ -24,7 +24,7 @@
             :play="play">
         </play-music>
         <audio ref="audio" autoplay :src="`https://music.163.com/song/media/outer/url?id=${playList[playCurIdx].id}.mp3`"></audio>
-    </div>
+    </footer>
 </template>
 
 <script>
@@ -84,12 +84,13 @@ export default{
 </script>
 
 <style lang="less" scoped>
-.footer{
-    background-color: white;
-    border-top: 1px solid gray;
-    z-index: 5;
+footer{
+    background-color: whitesmoke;
+    border-top: 1px solid lightgray;
+    z-index: 10;
     .left{
         display: flex;
+        align-items: center;
         width: 6rem;
         img{
             width: 1rem;
@@ -98,7 +99,14 @@ export default{
         }
         .content{
             padding-left: 0.3rem;
-            font-size: 0.45rem;
+            .title{
+                font-size: 0.45rem;
+                white-space: nowrap;
+                width: 5rem;
+                overflow: hidden;
+                text-overflow: ellipsis;
+            }
+            
             .tip{
                 font-size: 0.3rem;
                 color: gray ;

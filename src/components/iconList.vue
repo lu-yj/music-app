@@ -1,46 +1,45 @@
 <template>
-    <div class="container">
-        <div class="iconItem">
+    <div class="iconList">
+        <div class="iconItem" v-for="(item, i) in iconInfo" :key="i">
             <svg class="icon" aria-hidden="true">
-                <use xlink:href="#icon-tuijian"></use>
+                <use :xlink:href="`#icon-${item[0]}`"></use>
             </svg>
-            <span>每日推荐</span>
-        </div>
-        <div class="iconItem">
-            <svg class="icon" aria-hidden="true">
-                <use xlink:href="#icon-shouyinji"></use>
-            </svg>
-            <span>私人FM</span>
-        </div>
-        <div class="iconItem">
-            <svg class="icon" aria-hidden="true">
-                <use xlink:href="#icon-gedan"></use>
-            </svg>
-            <span>歌单</span>
-        </div>
-        <div class="iconItem">
-            <svg class="icon" aria-hidden="true">
-                <use xlink:href="#icon-paihangbang"></use>
-            </svg>
-            <span>排行榜</span>
+            <p>{{item[1]}}</p>
         </div>
     </div>
 </template>
 
+<script>
+export default {
+    data() {
+        return {
+            iconInfo: [
+                ['tuijian', '每日推荐'],
+                ['shouyinji', '私人FM'],
+                ['gedan', '歌单'],
+                ['paihangbang', '排行榜'],
+            ]
+        }
+    }
+}
+</script>
+
 <style lang="less" scoped>
-.container{
+.iconList{
     display: flex;
     justify-content: space-between;
-    padding: 0.4rem;
+    align-items: center;
+    padding: 0.4rem 0.6rem;
     .iconItem{
         display: flex;
         flex-direction: column;
+        justify-content: space-between;
         align-items: center;
         .icon{
             width: 1rem;
             height: 1rem;
         }
-        span{
+        p{
             font-size: 0.3rem;
         }
     }

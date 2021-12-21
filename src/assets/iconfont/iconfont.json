@@ -6,6 +6,13 @@
   "description": "",
   "glyphs": [
     {
+      "icon_id": "10087938",
+      "name": "排行榜",
+      "font_class": "paihangbang",
+      "unicode": "e653",
+      "unicode_decimal": 58963
+    },
+    {
       "icon_id": "577312",
       "name": "加号",
       "font_class": "jiahao",
@@ -57,7 +64,7 @@
     {
       "icon_id": "23312554",
       "name": "播客",
-      "font_class": "boke1",
+      "font_class": "boke",
       "unicode": "e603",
       "unicode_decimal": 58883
     },
@@ -221,13 +228,6 @@
       "font_class": "liebiao",
       "unicode": "e60a",
       "unicode_decimal": 58890
-    },
-    {
-      "icon_id": "10340479",
-      "name": "排行榜",
-      "font_class": "paihangbang",
-      "unicode": "e650",
-      "unicode_decimal": 58960
     },
     {
       "icon_id": "24732600",

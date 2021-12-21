@@ -1,5 +1,5 @@
 <template>
-	<div class="homePage">
+	<div class="home">
 		<home-nav></home-nav>
 		<banner></banner>
 		<icon-list></icon-list>
@@ -27,5 +27,7 @@ export default {
 </script>
 
 <style lang="less" scoped>
-
+.home{
+  background-image: linear-gradient(AntiqueWhite, whitesmoke);
+}
 </style>

@@ -1,25 +1,27 @@
 <template>
-    <div class="header">
-        <svg class="icon" aria-hidden="true" @click="$router.push('/')">
-			<use xlink:href="#icon-fanhui"></use>
-		</svg>
-    </div>
-    <section class="profile">
-        <img :src="$store.state.user.detail.profile.avatarUrl" alt="">
-        <h4 class="nickname">{{$store.state.user.detail.profile.nickname}}</h4>
-        <div class="followInfo">
-            <p>关注: {{$store.state.user.detail.profile.follows}}</p>
-            <p>粉丝: {{$store.state.user.detail.profile.followeds}}</p>
-        </div>
-    </section>
-    <section class="iconList">
-        <div class="iconItem" v-for="(item, i) in iconInfo" :key="i">
-            <svg class="icon" aria-hidden="true">
-                <use :xlink:href="`#icon-${item[0]}`"></use>
+    <div class="user">
+        <header>
+            <svg class="icon" aria-hidden="true" @click="$router.push('/')">
+                <use xlink:href="#icon-fanhui"></use>
             </svg>
-            <div class="iconNote">{{item[1]}}</div>
-        </div>
-    </section>
+        </header>
+        <section class="profile">
+            <img :src="$store.state.user.detail.profile.avatarUrl" alt="">
+            <h4 class="nickname">{{$store.state.user.detail.profile.nickname}}</h4>
+            <div class="followInfo">
+                <p>关注: {{$store.state.user.detail.profile.follows}}</p>
+                <p>粉丝: {{$store.state.user.detail.profile.followeds}}</p>
+            </div>
+        </section>
+        <section class="iconList">
+            <div class="iconItem" v-for="(item, i) in iconInfo" :key="i">
+                <svg class="icon" aria-hidden="true">
+                    <use :xlink:href="`#icon-${item[0]}`"></use>
+                </svg>
+                <div class="iconNote">{{item[1]}}</div>
+            </div>
+        </section>
+    </div>
 </template>
 
 <script>
@@ -33,7 +35,7 @@ export default {
                 ['bofang2', '最近播放'],
                 ['guanzhu', '我的关注'],
                 ['shoucang', '收藏'],
-                ['boke1', '我的播客'],
+                ['boke', '我的播客'],
                 ['jiahao', '更多']
             ]
         }
@@ -45,34 +47,42 @@ export default {
 </script>
 
 <style lang="less" scoped>
-.profile{
-    width: 10rem;
-    height: 3rem;
-    margin-top: 3rem;
-    padding: 0.6rem;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    img{
-        width: 1.4rem;
-        border-radius: 0.7rem;
-    }
-    .followInfo{
-        color: darkgray;
-        font-size: 0.4rem;
-    }
-}
-.iconList{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
-    width: 10rem;
-    .iconItem{
+.user{
+    background-color: floralwhite;
+    height: 100vh;
+    .profile{
+        height: 2rem;
+        margin: 0.6rem;
+        padding: 0 0.2rem;
         display: flex;
-        flex-direction: column;
+        justify-content: space-between;
         align-items: center;
-        padding: 0.5rem;
+        background-color: whitesmoke;
+        border-radius: 0.5rem;
+        img{
+            width: 1.4rem;
+            border-radius: 0.7rem;
+        }
+        .followInfo{
+            font-size: 0.4rem;
+        }
+    }
+    .iconList{
+        display: grid;
+        justify-content: space-between;
+        align-items: center;
+        grid-template-columns: repeat(4, 2rem);
+        margin: 0.6rem;
+        padding: 0.2rem;
+        grid-row-gap: 0.5rem;
+        font-size: 0.4rem;
+        background-color: whitesmoke;
+        border-radius: 0.5rem;
+        .iconItem{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
     }
 }
 </style>

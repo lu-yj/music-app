@@ -13,3 +13,9 @@ export default {
     }
 }
 </script>
+
+<style lang="less" scoped>
+.searchPage{
+  background-image: linear-gradient(AntiqueWhite, whitesmoke);
+}
+</style>
