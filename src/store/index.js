@@ -4,11 +4,11 @@ import {getLyric, phoneLogin, getUserInfo} from '@/api/axiosReq.js';
 export default createStore({
 	state: {
 		playList: [{
-			name: '后来（翻自 刘若英）',
-			id: 1894305294,
+			name: '两只老虎爱跳舞（抖音原版）',
+			id: 1808319413,
 			al: {
-				name: "?",
-				picUrl: "http://p3.music.126.net/jjZVrXs7Zvfe3XMSm2QyHw==/109951165973424293.jpg",
+				name: '',
+				picUrl: "https://p1.music.126.net/6y-UleORITEDbvrOLV0Q8A==/5639395138885805.jpg",
 			},
 		}],	
 		playCurIdx: 0,

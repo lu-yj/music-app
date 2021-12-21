@@ -1,29 +1,12 @@
 # music-app
 
-## Project setup
-```
-npm install
-```
+将 `dist` 文件夹部署到 GitHub Pages 上
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
-
-### Compiles and minifies for production
-```
-npm run build
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
-
-
-## src文件夹结构
-main.js 引入脚本  
-utils/rem.js 设置rem，用于自适应布局  
-assets/iconfont 下载下来的图标资源  
-
-
-## 部署 dist 文件到 GitHub Pages 上
+```sh
 git subtree push --prefix dist origin gh-pages
+```
+
+扫码查看：
+
+![qrcode](https://github.com/lu-yj/music-app/raw/master/static/qrcode.png)
+
