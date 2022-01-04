@@ -38,7 +38,7 @@ const routes = [
 ]
 
 const router = createRouter({
-	history: createWebHistory(process.env.BASE_URL), // createWebHistory(process.env.BASE_URL+'dist/')
+	history: createWebHistory(process.env.BASE_URL+'music-app/'), // createWebHistory(process.env.BASE_URL+'dist/')
 	routes
 })
 
